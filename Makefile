@@ -23,9 +23,10 @@ OBJS		= $(subst $(DIR_SRCS), $(DIR_OBJS), $(SRCS:.c=.o))
 
 INCLUDES	= -I includes
 
-CC		= clang
+CC		= cc -g
 CFLAGS	= -Wall -Wextra -Werror
-RM		= /bin/rm -f
+RM		= rm -f
+AR = ar rcs
 
 $(DIR_OBJS)/%.o :	$(DIR_SRCS)/%.c
 			@mkdir -p $(DIR_OBJS) $(OBJS_DIRS)
