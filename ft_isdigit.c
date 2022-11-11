@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abaltaza <abaltaza@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: abaltaza <abaltaza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 10:59:43 by abaltaza          #+#    #+#             */
-/*   Updated: 2022/11/10 10:59:43 by abaltaza         ###   ########.fr       */
+/*   Updated: 2022/11/11 16:53:34 by abaltaza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@
 ** 		The isdigit() function tests for a decimal digit character.
 */
 
+#include "libft.h"
 
 int    ft_isdigit(int c)
 {
