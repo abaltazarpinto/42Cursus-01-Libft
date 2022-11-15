@@ -19,8 +19,8 @@
 
 #### 💽 Description
 
-- Write your own library, containing an extract of important functions for your cursus.
-- You are free to add any function to your libft as you see fit.
+- Build a library containing important functions for your course. 
+- Your libft can include any function you think appropriate
 
 #### 💽 Functions List
 
