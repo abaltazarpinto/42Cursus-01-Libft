@@ -48,32 +48,6 @@
   lstadd_back, lstdelone, lstclear, lstiter, lstmap
   ```
 
-- [My own functions](/02_myown)
-
-  - [get_next_line](/02_myown/get_next_line.c)
-
-    ```c
-    int get_next_line(int fd, char **line);
-    ```
-
-    Write a function which returns a line read from a file descriptor, without the newline.
-
-  - [isspace](/02_myown/ft_isspace.c)
-
-    ```c
-    int ft_isspace(int c);
-    ```
-
-    Checks for white-space characters. (`" "`, `\f`, `\n`, `\r`, `\t`, `\v`)
-
-  - [chrdel](/02_myown/ft_chrdel.c)
-
-    ```c
-    char *ft_chrdel(char const *s, char c);
-    ```
-
-    Remove all specific characters(c) from a string(s).
-
 ------
 
 #### :link: Test Tools Links
