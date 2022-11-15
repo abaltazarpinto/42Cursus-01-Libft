@@ -1,6 +1,6 @@
 # Libft
 
-## :notebook_with_decorative_cover: 42 cursus (2022/11)
+# 🖥️ 42 cursus (2022/11)
 
 | Circle | Project                                                                              |            Language            |                                      Score                                       |  Level   |
 | :----: | :----------------------------------------------------------------------------------- | :----------------------------: | :------------------------------------------------------------------------------: | :------: |
@@ -9,20 +9,20 @@
 ---
 
 
-#### :page_facing_up: Program name
+#### 💽 Program name
 
 - **`libft.a`**
 
-#### :page_facing_up: Turn in files
+#### 💽: Turn in files
 
 - `*.c`, `libft.h`, `Makefile`
 
-#### :page_facing_up: Description
+#### 💽 Description
 
 - Write your own library, containing an extract of important functions for your cursus.
 - You are free to add any function to your libft as you see fit.
 
-#### :page_facing_up: Functions List
+#### 💽 Functions List
 
 - Part 1 - Libc functions
 
@@ -32,7 +32,7 @@
   atoi, isalpha, isdigit, isalnum, isascii, isprint, toupper, tolower,
   calloc, strdup
   ```
-
+<!--
 - Part 2 - Additional functions (~100)
 
   ```
@@ -48,6 +48,7 @@
   ```
 
 ------
+-->
 
 #### :link: Test Tools Links
 
