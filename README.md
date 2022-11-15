@@ -1,6 +1,6 @@
-# Libft---Functions
+# Libft
 
-## :notebook_with_decorative_cover: 42 cursus (2020/02/24~)
+## :notebook_with_decorative_cover: 42 cursus (2022/11)
 
 | Circle | Project                                                                              |            Language            |                                      Score                                       |  Level   |
 | :----: | :----------------------------------------------------------------------------------- | :----------------------------: | :------------------------------------------------------------------------------: | :------: |
@@ -8,7 +8,6 @@
 
 ---
 
-## :notebook_with_decorative_cover: Libft
 
 #### :page_facing_up: Program name
 
