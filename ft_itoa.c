@@ -61,7 +61,7 @@ char    *ft_itoa(int n)
         res[len] = minus(n % 10) + 48;
         n = n / 10;
     }
-    return (result);
+    return (res);
 }
 
 /*int	main(void)
