@@ -42,9 +42,9 @@ int	ft_atoi(char *str)
 	return (sign * n);
 }
 
-/*int	main(void)
+int	main(void)
 {
 	char    str[] = "   -----1234ab567";
         printf("String: %s\n", str);
         printf("Return: %d", ft_atoi(str));
-}*/
+}

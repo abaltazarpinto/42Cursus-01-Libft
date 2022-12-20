@@ -3,12 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abaltaza <abaltaza@student.42.fr>          +#+  +:+       +#+        */
+/*   By: abaltaza <abaltaza@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/11 16:51:17 by abaltaza          #+#    #+#             */
-/*   Updated: 2022/11/11 16:51:25 by abaltaza         ###   ########.fr       */
+/*   Created: 2022/11/06 17:55:17 by abaltaza          #+#    #+#             */
+/*   Updated: 2022/12/20 17:55:17 by abaltaza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+
+// The libft.h file is a header file that contains the definitions and prototypes for the functions in the libft library. These functions can be used in C programs to perform various tasks, such as memory manipulation, string manipulation, and list manipulation. 
 
 
 #ifndef LIBFT_H

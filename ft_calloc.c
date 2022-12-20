@@ -32,7 +32,7 @@ void	*ft_calloc(size_t nitems, size_t size)
 	i = 0;
 	total = nitems * size;
 	array = malloc(nitems * size);
-	if (arr == NULL)
+	if (array == NULL)
 		return (NULL);
 	while (total > 0)
 	{
