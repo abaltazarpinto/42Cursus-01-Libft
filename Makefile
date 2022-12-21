@@ -6,7 +6,7 @@
 #    By: abaltaza <abaltaza@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/10 10:34:36 by abaltaza          #+#    #+#              #
-#    Updated: 2022/11/11 16:53:32 by abaltaza         ###   ########.fr        #
+#    Updated: 2022/12/11 16:53:32 by abaltaza         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,6 +18,7 @@ ft_strlcat.c ft_toupper.c ft_tolower.c ft_strchr.c ft_strrchr.c ft_strncmp.c\
 ft_memchr.c ft_memcmp.c ft_strnstr.c ft_atoi.c ft_calloc.c ft_strdup.c\
 ft_substr.c ft_strjoin.c ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi.c\
 ft_striteri.c ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c\
+
 
 BONUS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c\
 ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c
@@ -33,22 +34,22 @@ BONUS_OBJ = $(BONUS:%.c=%.o)
 all: $(NAME)
 
 $(NAME): $(OBJ)
-		@$(AR) $(NAME) $(OBJ)
+	@$(AR) $(NAME) $(OBJ)
 
 bonus: $(OBJ) $(BONUS_OBJ)
-		@$(AR) $(NAME) $(BONUS_OBJ) $(OBJ)
+	@$(AR) $(NAME) $(BONUS_OBJ) $(OBJ)
 
 compile: bonus
-		@$(CC) $(CFLAGS) $(FUNCS)
+	@$(CC) $(CFLAGS) $(FUNCS)
 
 clean:
-		@$(RM) $(OBJ) $(BONUS_OBJ)
+	@rm -f $(OBJ) $(BONUS_OBJ)
 
 fclean: clean
-		@$(RM) $(NAME)
+	@rm -f $(NAME)
 
 re: fclean all
 
 so:
-	$(CC) -nostartfiles -fPIC $(CFLAGS) $(FUNCS) $(BONUS)
-	gcc -nostartfiles -shared -o libft.so $(OBJ) $(BONUS_OBJ)
+	@$(CC) -nostartfiles -fPIC $(CFLAGS) $(FUNCS) $(BONUS)
+	@gcc -nostartfiles -shared -o libft.so $(OBJ) $(BONUS_OBJ)
