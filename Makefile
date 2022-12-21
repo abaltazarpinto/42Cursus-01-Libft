@@ -53,3 +53,6 @@ re: fclean all
 so:
 	@$(CC) -nostartfiles -fPIC $(CFLAGS) $(FUNCS) $(BONUS)
 	@gcc -nostartfiles -shared -o libft.so $(OBJ) $(BONUS_OBJ)
+
+	dsadsada
+	
