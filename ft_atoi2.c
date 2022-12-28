@@ -34,6 +34,7 @@ int ft_atoi(char *str)
         result = result*10 + str[i] - '0';
 
     // Return result with sign
+    /ASd
     return sign*result;
 }
 
