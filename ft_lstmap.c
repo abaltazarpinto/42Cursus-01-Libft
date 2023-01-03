@@ -1,71 +1,46 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_lstmap.c                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: abaltaza <abaltaza@student.42porto.com>    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/28 18:52:04 by abaltaza          #+#    #+#             */
-/*   Updated: 2022/12/28 18:52:04 by abaltaza         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
-/*
-Function name ft_lstmap
-Prototype t_list *ft_lstmap(t_list *lst, void *(*f)(void *),
-void (*del)(void *));
-Turn in files -
-Parameters lst: The address of a pointer to a node.
-f: The address of the function used to iterate on
-the list.
-del: The address of the function used to delete
-the content of a node if needed.
-Return value The new list.
-NULL if the allocation fails.
-External functs. malloc, free
-Description Iterates the list ’lst’ and applies the function
-’f’ on the content of each node. Creates a new
-list resulting of the successive applications of
-the function ’f’. The ’del’ function is used to
-delete the content of a node if needed.
-*/
 
 
 
 t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-    t_list *new;
-    t_list *temp;
-
-    if (lst == NULL)
-        return (NULL);
-    new = NULL;
-    while (lst)
-    {
-        if (!(temp = (t_list *)malloc(sizeof(t_list))))
-        {
-            ft_lstclear(&new, del);
-            return (NULL);
-        }
-        temp->content = f(lst->content);
-        temp->next = new;
-        new = temp;
-        lst = lst->next;
-    }
-    return (new); 
-}
-
-int main()
-{
-    t_list *list;
-    list = (t_list *)malloc(sizeof(t_list));
-    list->content = "Hello";
-    list->next = NULL;
-
-    void *(*f)(void *) = &my_function;
-    void (*del)(void *) = &my_delete;
-
-    t_list *new_list = ft_lstmap(list, f, del);
-    print_list(new_list);
-    return 0;
-}
+	// This is the start of the ft_lstmap function which takes three parameters: lst, f, and del.
+	t_list *head;
+	// This is a pointer to the head of the new list. It is initialized to NULL.
+	t_list *new_node;
+	// This is a pointer to the new node that is created each time the list is iterated.
+	t_list *tail;
+	// This is a pointer to the tail of the new list. It is initialized to NULL.
+	
+	if (!lst)
+		return (NULL);
+	// If lst is NULL, the function returns NULL.
+	head = NULL;
+	tail = NULL;
+	// The head and tail pointers are initialized to NULL.
+	while (lst)
+	{
+		// This loop iterates over the list lst.
+		new_node = malloc(sizeof(t_list));
+		// A new node is created and assigned to the new_node pointer.
+		if (!new_node)
+		{
+			ft_lstclear(&head, del);
+			// If new_node is NULL, the list is cleared and NULL is returned.
+			return (NULL);
+		}
+		new_node->content = f(lst->content);
+		// The function f is applied to the content of the node.
+		new_node->next = NULL;
+		// The next pointer of the new node is set to NULL.
+		if (tail)
+			tail->next = new_node;
+		// If the tail pointer is not NULL, the next pointer of the tail node is set to the new node.
+		else
+			head = new_node;
+		// If the tail pointer is NULL, the head pointer is set to the new node.
+		tail = new_node;
+		// The tail pointer is updated to point to the new node.
+		lst = lst->next;
+		// The lst pointer is updated to point to the next node in the list.
+	}
+	return (head);
