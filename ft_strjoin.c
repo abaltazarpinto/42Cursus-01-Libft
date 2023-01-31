@@ -6,7 +6,7 @@
 /*   By: abaltaza <abaltaza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/03 17:36:23 by abaltaza          #+#    #+#             */
-/*   Updated: 2022/12/13 19:33:26 by abaltaza         ###   ########.fr       */
+/*   Updated: 2022/12/26 11:17:26 by abaltaza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,4 +47,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	char	str2[] = "Deus";
 	printf("Return: %s", ft_strjoin(str1, str2));
 }*/
-

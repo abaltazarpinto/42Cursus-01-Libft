@@ -47,3 +47,39 @@ void	*ft_calloc(size_t nitems, size_t size)
 {
 	printf("Return: %s", (char *)ft_calloc(5, 4));
 }*/
+
+given this function,
+void	*ft_calloc(size_t nitems, size_t size)
+{
+	//allocating memory size with nitems*size
+	void *ptr = malloc(nitems * size); 
+    	//validating if memory allocation is successful
+	if (ptr == NULL)
+	{
+	//return NULL if memory allocation fails
+	        return NULL;
+	}
+	//setting all bytes of allocated memory to 0
+	int	i = 0;
+	while (i < nitems * size)
+	{
+		*((char*)ptr + i) = 0;
+		i++;
+	}
+	//returning the pointer of allocated memory
+	return ptr;
+}
+
+what this codes do exactly ?
+
+	//setting all bytes of allocated memory to 0
+	int	i = 0;
+	while (i < nitems * size)
+	{
+		*((char*)ptr + i) = 0;
+		i++;
+	}
+
+
+/*This code sets all bytes of the allocated memory to 0. It does this by iterating over the allocated memory, setting each byte to 0. The allocated memory is pointed to by the pointer 'ptr' which is of type void*. The pointer is cast to a char* so that the bytes can be accessed one at a time. The loop runs until the 'i' counter is equal to the total number of bytes allocated, which is 'nitems * size'.
+*/
